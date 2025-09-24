@@ -17,10 +17,10 @@ class LoginScreen extends StatelessWidget {
       loginAfterSignUp: false,
       logo: const AssetImage('assets/images/logo.png'),
       onLogin: (LoginData loginData) {
-        //TODO: should complete call login
+        context.userProvider.login(loginData);
       },
       onSignup: (SignupData data) {
-        //TODO: should complete call register
+        context.userProvider.register(data);
       },
       onSubmitAnimationCompleted: () {
         if(context.userProvider.getLoginUsr()?.sId != null){
